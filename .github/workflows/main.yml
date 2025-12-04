@@ -11,17 +11,18 @@ on:
         - ubuntu-22.04
         - self-hosted
         - windows-latest
-    jobs-name:
-      description: "select the job to run"
-      required: true 
-      type: choice
-      options: 
-        - buildjob
-        - testjob
-        - deployjob
-    # job-name:
-        #description: "Enter the multiple jobs to run" 
-        # type: string
+    #jobs-name:  # this is not a github actions keyword. it is user provided, you can give nay name
+     # description: "select the job to run"
+     # required: true 
+     # type: choice
+     # options: 
+      #  - buildjob
+      #  - testjob
+       # - deployjob
+    job-name:
+    # i have question job_name and  job_to_run  if i replaced job_name to Job_to_run is work which one isused for production
+      description: "Enter the multiple jobs to run" 
+      type: string
         # when running the job, we will give job names seperated by comma
 jobs: 
   buildjob:
