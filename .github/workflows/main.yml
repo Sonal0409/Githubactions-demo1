@@ -13,7 +13,8 @@ on:
         - windows-latest
     job-name:
       description: "Enter the multiple jobs to run" 
-      type: string     
+      type: string
+      required: true
 jobs: 
   buildjob:
     if: contains(github.event.inputs.jobs-name, 'buildjob')
